@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+
+
+    <head>
+
+            <title>Login</title>
+            <meta charset="utf-8">
+            {% load static %}
+            <link rel="stylesheet" type="text/css" href='{% static "css/loginstyle.css" %}'>
+
+    </head>
+
+    <body>
+<!-- 
+        <div id='check'>
+            <img src='{% static "img/check.jpg" %}'>
+            <img src='{% static "img/check.jpg" %}'>
+            <img src='{% static "img/check.jpg" %}'>
+        </div> -->
+
+
+
+
+        <div id='container'>
+            <div id="formulario">
+            
+                
+                    
+                    <form action="submit" method="POST">{% csrf_token %}
+                        <img id='img-agenda' src="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZpZXdCb3g9IjAgMCAxNzIgMTcyIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9Im5vbnplcm8iIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtbGluZWNhcD0iYnV0dCIgc3Ryb2tlLWxpbmVqb2luPSJtaXRlciIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBzdHJva2UtZGFzaGFycmF5PSIiIHN0cm9rZS1kYXNob2Zmc2V0PSIwIiBmb250LWZhbWlseT0ibm9uZSIgZm9udC13ZWlnaHQ9Im5vbmUiIGZvbnQtc2l6ZT0ibm9uZSIgdGV4dC1hbmNob3I9Im5vbmUiIHN0eWxlPSJtaXgtYmxlbmQtbW9kZTogbm9ybWFsIj48cGF0aCBkPSJNMCwxNzJ2LTE3MmgxNzJ2MTcyeiIgZmlsbD0ibm9uZSI+PC9wYXRoPjxnIGZpbGw9IiNmZmZmZmYiPjxwYXRoIGQ9Ik04NiwxNy4yYy0xOS4wMDAyNywwIC0zNC40LDE1LjM5OTczIC0zNC40LDM0LjR2NS43MzMzM2MwLDE5LjAwMDI3IDE1LjM5OTczLDM0LjQgMzQuNCwzNC40YzE5LjAwMDI3LDAgMzQuNCwtMTUuMzk5NzMgMzQuNCwtMzQuNHYtNS43MzMzM2MwLC0xOS4wMDAyNyAtMTUuMzk5NzMsLTM0LjQgLTM0LjQsLTM0LjR6TTg1Ljk4ODgsMTA4LjkzMzMzYy0yMi45Njc3MywwIC01Mi40MzcwNywxMi40MjMyNCAtNjAuOTE2NjcsMjMuNDQ4NDRjLTUuMjQwMjcsNi44MTY5MyAtMC4yNTE4MiwxNi42ODQ4OSA4LjM0MjQ1LDE2LjY4NDg5aDEwNS4xNTk2NGM4LjU5NDI3LDAgMTMuNTgyNzEsLTkuODY3OTYgOC4zNDI0NSwtMTYuNjg0ODljLTguNDc5NiwtMTEuMDE5NDcgLTM3Ljk2MDEzLC0yMy40NDg0NCAtNjAuOTI3ODYsLTIzLjQ0ODQ0eiI+PC9wYXRoPjwvZz48L2c+PC9zdmc+">
+
+                        <h1 id='titulo'>Login</h1>
+                        <div id='form_fields' align = 'center'> 
+                            <div>
+                                <label>Usuário:</label>
+
+                                <input id='name' type="text" name="username" size="10px"><br>
+                            </div> 
+                            <div>
+                                <label>Senha:</label>
+
+                                <input id='password' type="password" name="password" size="10px"><br>
+                            </div> 
+                            <button type="submit"> Entrar </button>
+                        </div>
+                        
+                    </form>
+
+            </div>
+        </div>
+        {% for message in messages %}
+            <div align='center'>
+                <strong>ERRO : </strong>{{message}}
+            </div>
+        {% endfor %}
+
+    </body>  
+</html>

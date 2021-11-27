@@ -1,0 +1,133 @@
+body{
+	background-color:  #2e5b96;
+	color: white;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+#check{
+	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: absolute;
+	left: 30%;
+	
+}
+
+
+#check img{
+	width: 40px;
+	height: 40px;
+	margin-top: 18px;
+
+}
+#container{
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
+	height: 100vh;
+}
+
+#formulario {
+		height: 40vh;
+		width: 40vw;
+		margin-left: 10px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 30px;
+		border-radius: 20px;
+		border:2px solid rgb(36, 64, 131);
+		margin-bottom: 5px;
+		background-color: rgba(89,14,160, 0.15);
+	}
+
+#formulario form{
+	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+}
+#formulario form h1{
+	font-family: Arial;
+	font-weight: bold;
+	
+}
+#formulario form label{
+	
+	flex: 1;
+	font-family: Arial;
+	font-weight: bold;
+	margin-bottom: 5px;
+	
+}
+#formulario form #password{
+	position: relative;
+
+}
+
+#formulario form button{
+	margin-top: 10px;
+}
+
+
+
+#form_fields{
+	flex-direction: column;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	margin-right: 3vw;
+}
+
+#formulario input{
+	padding: 5px;
+	border-radius: 18px;
+	border: none;
+	width: 10rem;
+	font-size: 1.1em;
+	margin-bottom: 8px;
+}
+
+button {
+	padding: 10px;
+	border-radius: 18px;
+	border: none;
+	background-color: #38ac42;
+	color: white;
+	width: 7rem;
+	transition: background-color 0.5s;
+}
+
+#img-agenda{
+	width: 80px;
+}
+
+button:hover{
+	background-color: #4bca56;
+}
+
+#img-agenda{
+	transition: transform 0.5s;
+}
+
+#img-agenda:hover{
+	transform: rotateY(180deg)
+}
+
+#erro{
+	font-family: Arial;
+	font-weight: bold;
+}
+
+input:focus{
+	outline: 0;
+}
+
+#titulo{
+	color: rgb(26, 31, 92);
+}
